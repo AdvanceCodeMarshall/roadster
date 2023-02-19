@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
-nohop $TOMCAT_HOME/bin/startup.sh &
+nohup $TOMCAT_HOME/bin/startup.sh &
 exec $@
