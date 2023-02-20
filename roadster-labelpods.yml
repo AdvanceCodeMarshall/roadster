@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: roadsterpod
+  labels:
+    appName: roadster
+    varsion: "1"
+    env: stage
+spec:
+  containers:
+    - name: roadstercontainer
+      image: mgmbcssantosh86/roadster:1.0
+      resources:
+        requests:
+          cpu: "500m"
+          memory: "512Mi"
+        limits:
+          cpu: "1"
+          memory: "1024Mi"
+      ports:
+        - name: tomcatports
+          containerPort: 8080
+          protocol: TCP
+      
+      
